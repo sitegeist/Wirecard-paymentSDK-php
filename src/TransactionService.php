@@ -276,7 +276,7 @@ class TransactionService
             $secret = $isThreeD ? $config->getThreeDSecret() : $config->getSecret();
         }
 
-        $transactionType = 'tokenize';
+        $transactionType = 'authorization-only';
 
         if (!is_null($amount) && $amount->getValue() > 0) {
             $transactionType = $paymentAction;
