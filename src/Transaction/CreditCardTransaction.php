@@ -228,6 +228,7 @@ class CreditCardTransaction extends Transaction implements Reservable
                 $transactionType = self::TYPE_REFERENCED_AUTHORIZATION;
                 break;
             case self::TYPE_CHECK_ENROLLMENT:
+            case self::TYPE_AUTHORIZATION_ONLY:
                 $transactionType = self::TYPE_AUTHORIZATION;
                 break;
             default:
